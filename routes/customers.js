@@ -75,6 +75,7 @@ module.exports = server => {
     });
 
     // delete customer
+    // added a comment
     server.del('/customers/:id', async (req,res,next) => {
         try {
             const customer = await Customer.findOneAndRemove({_id: req.params.id});
